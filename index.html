@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calvin Tigere | Web Developer</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+color:white;
+scroll-behavior:smooth;
+background: linear-gradient(-45deg, #020617, #0f172a, #1e3a8a, #0ea5e9);
+background-size: 400% 400%;
+animation: ocean 10s ease infinite;
+}
+
+@keyframes ocean{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 8%;
+background: rgba(0,0,0,0.5);
+backdrop-filter: blur(10px);
+position:sticky;
+top:0;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero span{
+color:#38bdf8;
+}
+
+.hero p{
+margin-top:10px;
+}
+
+.btn{
+margin-top:20px;
+padding:12px 25px;
+background:#38bdf8;
+border:none;
+border-radius:5px;
+cursor:pointer;
+color:black;
+font-weight:bold;
+}
+
+section{
+padding:80px 10%;
+text-align:center;
+}
+
+.section-title{
+font-size:30px;
+margin-bottom:40px;
+}
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.skill{
+background:rgba(0,0,0,0.5);
+padding:15px 25px;
+border-radius:8px;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.project{
+background:rgba(0,0,0,0.5);
+padding:20px;
+border-radius:10px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:rgba(0,0,0,0.5);
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:30px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Calvin</h2>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+</ul>
+</nav>
+
+<div class="hero">
+<h1>Hello I'm <span>Calvin Tigere</span></h1>
+<p>I build modern websites for businesses</p>
+<button class="btn" onclick="scrollToSection('projects')">View My Work</button>
+</div>
+
+<section id="about">
+<h2 class="section-title">About Me</h2>
+<p>
+I'm a web developer who creates modern, responsive and clean websites.
+I help businesses go online and attract more customers.
+</p>
+</section>
+
+<section id="skills">
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Website Design</div>
+</div>
+
+</section>
+
+<section id="projects">
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>Business Website</h3>
+<p>Modern website for a small business.</p>
+</div>
+
+<div class="project">
+<h3>Portfolio Website</h3>
+<p>Clean personal portfolio design.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Calvin Tigere</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/0652961813" target="_blank">💬</a>
+<a class="Email" href="https://calvintigere06@gmail.com" target="_blank">💬Email</a>
+<script>
+
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({
+behavior:'smooth'
+});
+}
+
+</script>
+
+</body>
+</html>
