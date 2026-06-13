@@ -2,8 +2,85 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tigere Tech Studio | Web Developer · Southern Africa</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Tigere Tech Studio | Web Developer Zimbabwe · IT · E-Commerce · Southern Africa</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Tigere Tech Studio is a Zimbabwe web development and IT company based in Gweru and Harare. We build websites, e-commerce stores, do graphic design, music marketing, business strategy and IT support for businesses across Southern Africa.">
+<meta name="keywords" content="Tigere Tech Studio, Zimbabwe tech company, web developer Zimbabwe, Building the digital future of Zimbabwe, web design Gweru, web design Harare, IT company Zimbabwe, e-commerce Zimbabwe, graphic design Zimbabwe, music marketing Zimbabwe, Southern Africa web developer, Zimbabwe website design, tech companies Zimbabwe, website design Zimbabwe, IT support Zimbabwe, digital marketing Zimbabwe, music distribution Zimbabwe">
+<meta name="author" content="Calvin Tigere - Tigere Tech Studio">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="theme-color" content="#e8410a">
+<meta name="geo.region" content="ZW">
+<meta name="geo.placename" content="Gweru, Zimbabwe">
+<meta name="language" content="English">
+
+<!-- Open Graph - WhatsApp, Facebook previews -->
+<meta property="og:title" content="Tigere Tech Studio | Web Developer · Zimbabwe">
+<meta property="og:description" content="We build websites, e-commerce stores, and digital solutions for businesses across Zimbabwe and Southern Africa. Web design, music marketing, graphic design, IT support.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tigeretechstudio.tech">
+<meta property="og:site_name" content="Tigere Tech Studio">
+<meta property="og:locale" content="en_ZW">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tigere Tech Studio | Zimbabwe Web Developer">
+<meta name="twitter:description" content="Websites, e-commerce, graphic design, music marketing and IT support across Zimbabwe and Southern Africa.">
+<meta name="twitter:site" content="@tigeretech">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://tigeretechstudio.tech">
+
+<!-- Structured Data for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Tigere Tech Studio",
+  "alternateName": "Tigere Tech",
+  "description": "Web development, e-commerce, graphic design, music marketing and IT support for businesses across Zimbabwe and Southern Africa.",
+  "url": "https://tigeretechstudio.tech",
+  "telephone": "+263776486777",
+  "email": "calvintigere06@gmail.com",
+  "founder": {
+    "@type": "Person",
+    "name": "Calvin Tigere"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Gweru",
+    "addressRegion": "Midlands",
+    "addressCountry": "ZW"
+  },
+  "areaServed": [
+    "Zimbabwe",
+    "South Africa",
+    "Zambia",
+    "Botswana",
+    "Southern Africa"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Digital Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Web Design and Development"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "E-Commerce Setup"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Graphic Design"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Music Marketing and Distribution"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Marketing"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "IT Support"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Business Strategy Consulting"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Print Services"}}
+    ]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/calvintegere",
+    "https://github.com/calvintigere"
+  ]
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -33,6 +110,54 @@ nav {
 nav ul { display: flex; gap: 1.8rem; list-style: none; }
 nav ul a { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
 nav ul a:hover { color: var(--accent); }
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--ink);
+  transition: all 0.3s;
+}
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 57px;
+  left: 0;
+  right: 0;
+  background: rgba(245,242,235,0.98);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  z-index: 99;
+  padding: 1rem 1.5rem;
+  flex-direction: column;
+  gap: 0;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s;
+}
+.mobile-nav a:last-child { border-bottom: none; }
+.mobile-nav a:hover { color: var(--accent); }
+@media (max-width: 640px) {
+  .hamburger { display: flex; }
+}
 
 /* HERO */
 #hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 8rem 2rem 4rem; gap: 4rem; }
@@ -147,12 +272,28 @@ footer span { color: var(--accent); }
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }
 }
 @media (max-width: 640px) {
-  #hero { grid-template-columns: 1fr; padding-top: 7rem; }
+  #hero { grid-template-columns: 1fr; padding-top: 6rem; padding-bottom: 3rem; }
   .hero-right { display: none; }
   .contact-layout { grid-template-columns: 1fr; gap: 2rem; }
   .services-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
   nav ul { display: none; }
+  h1 { font-size: 2.4rem; line-height: 1.05; }
+  .section-inner { padding: 3.5rem 1.2rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+  .modules-grid { grid-template-columns: 1fr; }
+  .cta-box { padding: 1.5rem; }
+  .service-card { padding: 1.4rem; }
+  footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+  .btn { padding: 0.75rem 1.4rem; font-size: 0.68rem; }
+  .btn-row { gap: 0.7rem; }
+  .hero-desc { font-size: 0.82rem; }
+  nav { padding: 0.8rem 1.2rem; }
+}
+@media (max-width: 380px) {
+  h1 { font-size: 2rem; }
+  .stat-grid { grid-template-columns: 1fr 1fr; }
 }
 </style>
 </head>
@@ -176,7 +317,19 @@ footer span { color: var(--accent); }
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#modules" onclick="closeMenu()">Modules</a>
+  <a href="#skills" onclick="closeMenu()">Skills</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
 
 <!-- HERO -->
 <section id="hero">
@@ -513,5 +666,13 @@ footer span { color: var(--accent); }
   <div>Built by <span>Calvin Tigere</span> · All rights reserved</div>
 </footer>
 
+<script>
+function toggleMenu() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('mobileNav').classList.remove('open');
+}
+</script>
 </body>
 </html>
